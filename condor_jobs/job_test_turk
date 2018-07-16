@@ -1,0 +1,18 @@
++Group = "GRAD"
++Project = "PROGRAMMING_LANGUAGES"
++ProjectDescription = "job_test_turk"
+ 
++GPUJob = true
+getenv = true
+executable = /bin/sh
+arguments = /scratch/cluster/xwang/deep-regex/condor_jobs/test_turk.sh 
+requirements = (TARGET.GPUSlot && eldar)
+ 
+#Error = err.$(Process)
+#Output = out.$(Process)
+#Log = foo.log
+ 
+Notification = Always
+
+queue 1
+

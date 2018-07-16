@@ -1,0 +1,18 @@
++Group = "GRAD"
++Project = "PROGRAMMING_LANGUAGES"
++ProjectDescription = "job_train_synth"
+ 
++GPUJob = true
+getenv = true
+executable = /bin/sh
+arguments = /scratch/cluster/xwang/deep-regex/condor_jobs/train_synth.sh 
+requirements = (TARGET.GPUSlot && eldar)
+ 
+#Error = err.$(Process)
+#Output = out.$(Process)
+#Log = foo.log
+
+Notification = Always
+
+queue 1
+

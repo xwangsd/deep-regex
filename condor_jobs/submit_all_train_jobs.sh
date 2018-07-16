@@ -1,0 +1,4 @@
+condor_submit job_train_KB
+condor_submit job_train_turk
+condor_submit job_train_synth
+
